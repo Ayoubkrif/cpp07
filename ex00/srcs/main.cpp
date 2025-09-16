@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/31 15:07:36 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/09/15 20:34:09 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/09/16 09:21:26 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	main(void)
 {
 	{
 		float	a = 1.5, b = -1.5;
+		std::cout << "a = " << a << std::endl
+			<< "b = "<< b << std::endl;
 		std::cout << "min(a,b) = " << min(a,b) << std::endl;
 		std::cout << "max(a,b) = " << max(a,b) << std::endl;
 		swap(&a, &b);
@@ -35,6 +37,8 @@ int	main(void)
 	std::cout << std::endl;
 	{
 		int	a = 1, b = -1;
+		std::cout << "a = " << a << std::endl
+			<< "b = "<< b << std::endl;
 		std::cout << "min(a,b) = " << min(a,b) << std::endl;
 		std::cout << "max(a,b) = " << max(a,b) << std::endl;
 		swap(&a, &b);
@@ -50,6 +54,8 @@ int	main(void)
 	std::cout << std::endl;
 	{
 		char	a = 'a', b = 'b';
+		std::cout << "a = " << a << std::endl
+			<< "b = "<< b << std::endl;
 		std::cout << "min(a,b) = " << min(a,b) << std::endl;
 		std::cout << "max(a,b) = " << max(a,b) << std::endl;
 		swap(&a, &b);
