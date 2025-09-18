@@ -6,11 +6,11 @@
 #    By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 20:52:04 by aykrifa           #+#    #+#              #
-#    Updated: 2025/08/26 10:26:13 by aykrifa          ###   ########.fr        #
+#    Updated: 2025/09/18 09:11:53 by aykrifa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Pets
+NAME		= Array
 CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
@@ -22,10 +22,6 @@ SRC_DIRS	=
 SRC_DIRS_PATHS = $(addprefix $(SRC_PATH)/,$(SRC_DIRS))
 
 SOURCES		= main.cpp \
-			  Animal.cpp \
-			  Cat.cpp \
-			  Dog.cpp \
-			  Brain.cpp \
 
 SRCS		= $(addprefix $(SRC_PATH)/,$(SOURCES))
 OBJS		= $(addprefix $(OBJ_PATH)/,$(SOURCES:.cpp=.o))

@@ -6,38 +6,44 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 13:08:35 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/27 11:51:03 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/09/18 09:39:28 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "Array.hpp"
 
 int	main(void)
 {
-	const Animal	*j = new Dog();
-	const Animal	*i = new Cat();
-	Animal			*k = new Cat();
-	Animal			*l = new Dog();
+	Array	<float>a(5);
 
-	std::cout << "=====================" << std::endl;
-	*k = *i;
-	*l = *j;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	delete i;
-	std::cout << k->getType() << " " << std::endl;
-	k->makeSound(); //wkll output the cat sound!
-	std::cout << j->getType() << " " << std::endl;
-	j->makeSound();
-	delete j;
-	/*const Animal	*meta = new Animal();*/
-	/*std::cout << meta->getType() << " " << std::endl;*/
-	/*meta->makeSound();*/
-	/*delete meta;*/
-	delete k;
-	delete l;
+	for (unsigned int i = 0; i < a.size(); ++i)
+		a[i] = 1.23545;
+	for (unsigned int i = 0; i < a.size(); ++i)
+		std::cout << a[i] << std::endl;
 	
+	try
+	{
+		std::cout << "we try to access out of array element" << std::endl;
+		a[5];
+	}
+	catch (std::exception e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << std::endl << "copy constructor :" << std::endl;
+	Array	<float>b(a);
+
+	for (unsigned int i = 0; i < b.size(); ++i)
+		std::cout << b[i] << std::endl;
+
+	std::cout << std::endl << "assignement :" << std::endl;
+	Array	<float>c;
+
+	c = a;
+	for (unsigned int i = 0; i < c.size(); ++i)
+		std::cout << c[i] << std::endl;
+
 	return (0);
 }

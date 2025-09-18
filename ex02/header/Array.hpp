@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 12:53:17 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/09/17 13:45:45 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/09/18 09:36:23 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,8 @@ class	Array
 
 		Array(Array const &copy)
 		{
-			Array	a;
-			delete[] a._content;
-			a = copy;
-			return (a);
+			_content = new T[0];
+			*this = copy;
 		}
 
 		~Array(void)
@@ -68,7 +66,7 @@ class	Array
 			return (this->_content[at]);
 		}
 
-		unsigned int	size(void) const
+		inline unsigned int	size(void) const
 		{
 			return (this->_size);
 		}
