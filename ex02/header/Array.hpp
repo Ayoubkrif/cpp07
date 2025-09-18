@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 12:53:17 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/09/18 09:36:23 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/09/18 09:57:09 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ class	Array
 		T			&operator[](unsigned int at)
 		{
 			if (at >= this->_size)
-				throw (OutOfArray());
+				throw (Array::OutOfArray());
 			return (this->_content[at]);
 		}
 
